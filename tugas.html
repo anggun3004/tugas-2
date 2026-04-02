@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literasi Digital</title>
+    <style>
+        /* CSS Manual agar tidak bergantung pada koneksi luar */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f9fafb; color: #333; }
+
+        /* Navbar */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 50px; background: white; shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .logo { font-weight: bold; color: #1e40af; display: flex; align-items: center; gap: 8px; }
+        .nav-links a { text-decoration: none; color: #4b5563; margin-left: 25px; font-size: 14px; font-weight: 500; }
+
+        /* Hero Section */
+        .hero { 
+            height: 400px; 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1000') center/cover;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 20px;
+        }
+        .hero h1 { font-size: 40px; margin-bottom: 10px; }
+        .hero p { opacity: 0.9; max-width: 600px; margin-bottom: 25px; }
+        .btn-group { display: flex; gap: 15px; }
+        .btn-blue { background: #2563eb; color: white; border: none; padding: 10px 25px; border-radius: 5px; cursor: pointer; font-weight: 600; }
+        .btn-outline { background: transparent; color: white; border: 1px solid white; padding: 10px 25px; border-radius: 5px; cursor: pointer; }
+
+        /* Table Section */
+        .container { max-width: 1000px; mx-auto; margin: 50px auto; padding: 0 20px; }
+        .section-title { text-align: center; margin-bottom: 30px; }
+        .section-title h2 { font-size: 28px; }
+        .section-title p { color: #6b7280; font-size: 14px; }
+
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        th { background: #eff6ff; padding: 15px; text-align: left; font-size: 12px; color: #374151; text-transform: uppercase; }
+        td { padding: 15px; border-bottom: 1px solid #f3f4f6; font-size: 14px; }
+        .btn-detail { background: #22d3ee; color: white; border: none; padding: 5px 15px; border-radius: 4px; cursor: pointer; font-size: 12px; }
+
+        /* News Section */
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 30px; }
+        .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .card img { width: 100%; height: 180px; object-fit: cover; }
+        .card-content { padding: 20px; }
+        .card-content h3 { color: #2563eb; margin-bottom: 10px; font-size: 18px; }
+        .card-content p { color: #6b7280; font-size: 14px; margin-bottom: 20px; line-height: 1.5; }
+        .btn-news { width: 100%; border: 1px solid #2563eb; color: #2563eb; padding: 10px; border-radius: 5px; background: none; cursor: pointer; font-weight: 600; }
+
+        /* Footer */
+        footer { background: #1f2937; color: white; padding: 50px 20px; margin-top: 50px; }
+        .footer-content { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; }
+        .footer-content h4 { margin-bottom: 15px; }
+        .footer-content p { color: #9ca3af; font-size: 14px; max-width: 300px; }
+        .socials a { color: #9ca3af; text-decoration: none; margin-right: 15px; font-size: 14px; }
+        .copyright { text-align: center; border-top: 1px solid #374151; margin-top: 40px; padding-top: 20px; color: #6b7280; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">📚 LITERASI DIGITAL</div>
+        <div class="nav-links">
+            <a href="#">Beranda</a>
+            <a href="#">Koleksi</a>
+            <a href="#">Berita</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Membaca Adalah Kekuatan</h1>
+        <p>Temukan ribuan referensi dunia untuk mengasah pola pikir kritis Anda.</p>
+        <div class="btn-group">
+            <button class="btn-blue">Jelajahi Buku</button>
+            <button class="btn-outline">Daftar Anggota</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>Buku Terpopuler</h2>
+            <p>Daftar buku yang paling sering dipinjam bulan ini.</p>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Judul Buku</th>
+                    <th>Kategori</th>
+                    <th>Tahun Terbit</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#B001</td>
+                    <td><b>Logika & Retorika</b></td>
+                    <td>Filsafat</td>
+                    <td>2021</td>
+                    <td><button class="btn-detail">Detail</button></td>
+                </tr>
+                <tr>
+                    <td>#B002</td>
+                    <td><b>Sains Modern</b></td>
+                    <td>Ilmu Alam</td>
+                    <td>2022</td>
+                    <td><button class="btn-detail">Detail</button></td>
+                </tr>
+                <tr>
+                    <td>#B003</td>
+                    <td><b>Algoritma Kehidupan</b></td>
+                    <td>Teknologi</td>
+                    <td>2023</td>
+                    <td><button class="btn-detail">Detail</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <section style="background: #f3f4f6; padding: 50px 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Berita Terbaru</h2>
+            </div>
+            <div class="news-grid">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=500">
+                    <div class="card-content">
+                        <h3>Seminar Berpikir Kritis</h3>
+                        <p>Bagaimana cara membedakan fakta dan opini di media sosial? Simak selengkapnya.</p>
+                        <button class="btn-news">Baca Artikel</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=500">
+                    <div class="card-content">
+                        <h3>Fasilitas Ruang Podcast</h3>
+                        <p>Kini perpustakaan menyediakan studio podcast untuk menyalurkan opini kreatif Anda.</p>
+                        <button class="btn-news">Baca Artikel</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=500">
+                    <div class="card-content">
+                        <h3>Tantangan Membaca 30 Hari</h3>
+                        <p>Ikuti tantangan membaca satu buku per minggu dan dapatkan hadiah menarik.</p>
+                        <button class="btn-news">Baca Artikel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>Tentang Pustaka Digital</h4>
+                <p>Kami berkomitmen membangun ekosistem digital yang sehat untuk meningkatkan kecerdasan bangsa.</p>
+            </div>
+            <div>
+                <h4>Ikuti Kami</h4>
+                <div class="socials">
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">YouTube</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">© 2024 Literasi Digital. Semua Hak Dilindungi.</div>
+    </footer>
+
+</body>
+</html>
